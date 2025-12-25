@@ -1,16 +1,505 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Rodrigo Moreno | Full Stack Developer & Home Lab Enthusiast">
+  <!-- Animated Background Blobs -->
+  <div class="bg-blob bg-blob-1"></div>
+  <div class="bg-blob bg-blob-2"></div>
+  <div class="bg-blob bg-blob-3"></div>
+
+  <!-- Navbar -->
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 glass-strong border-b border-zinc-800/50"
+  >
+    <div
+      class="max-w-7xl mx-auto px-4 lg:px-8 py-4 flex items-center justify-between"
+    >
+      <a href="#home" class="text-xl font-bold gradient-text">RM</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a
+          href="#about"
+          class="text-zinc-300 hover:text-white transition-colors">Inicio</a
+        >
+        <a
+          href="#experience"
+          class="text-zinc-300 hover:text-white transition-colors"
+          >Experiencia</a
+        >
+        <a
+          href="#projects"
+          class="text-zinc-300 hover:text-white transition-colors">Proyectos</a
+        >
+        <a
+          href="#contact"
+          class="bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 rounded-full hover:scale-105 transition-transform"
+          >Contacto</a
+        >
+      </div>
+      <!-- Mobile menu icon -->
+      <button class="md:hidden text-white" aria-label="Menu">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main
+    class="relative z-10 min-h-screen px-4 py-12 lg:px-8 max-w-7xl mx-auto pt-24"
+  >
+    <!-- Bento Grid Container -->
+    <div
+      id="home"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 auto-rows-auto"
+    >
+      <!-- 1. Hero / Profile Card - Large -->
+      <div
+        class="md:col-span-2 lg:row-span-2 glass rounded-3xl p-8 border-0 gradient-border card-hover glow-blue"
+      >
+        <div class="flex flex-col h-full justify-center">
+          <img
+            src="/avatar.png"
+            alt="Rodrigo Moreno"
+            class="w-24 h-24 rounded-full mb-6 ring-4 ring-blue-500/50 hover:ring-purple-500/50 transition-all duration-300"
+          />
+          <h1
+            class="text-4xl lg:text-5xl font-bold mb-4 gradient-text"
+            style="letter-spacing: -0.02em;"
+          >
+            Rodrigo Moreno
+          </h1>
+          <h2 class="text-xl lg:text-2xl text-zinc-300 mb-4 font-semibold">
+            Programador Senior J2EE & Full Stack
+          </h2>
+          <p class="text-zinc-400 leading-relaxed mb-6 text-base">
+            Analista SOA y desarrollador con <span
+              class="text-blue-400 font-semibold">+15 años de experiencia</span
+            > en grandes corporaciones (Banca, Energía, Administración Pública). Especialista
+            en migraciones complejas, arquitectura Java y desarrollo Frontend moderno.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span
+              class="px-4 py-2 glass rounded-full text-sm font-medium border border-green-500/30 text-green-400 glow-emerald animate-pulse-slow"
+            >
+              🟢 Open to Work
+            </span>
+            <span
+              class="px-4 py-2 glass rounded-full text-sm border border-zinc-700 text-zinc-300"
+            >
+              📍 España
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Frontend Stack -->
+      <div
+        class="lg:row-span-2 glass rounded-3xl p-6 border-0 gradient-border card-hover"
+      >
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">⚛️</span>
+          <h3 class="text-xl font-bold">Frontend Stack</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-blue-500/50 border border-transparent transition-all cursor-pointer"
+            >HTML5 / CSS3</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-blue-500/50 border border-transparent transition-all cursor-pointer"
+            >JavaScript ES6+</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-blue-500/50 border border-transparent transition-all cursor-pointer"
+            >React / Vite</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-blue-500/50 border border-transparent transition-all cursor-pointer"
+            >Cloudflare Pages</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-blue-500/50 border border-transparent transition-all cursor-pointer"
+            >SEO / A11y</span
+          >
+        </div>
+      </div>
+
+      <!-- 3. Backend Stack -->
+      <div
+        class="lg:row-span-2 glass rounded-3xl p-6 border-0 gradient-border card-hover"
+      >
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">☕</span>
+          <h3 class="text-xl font-bold">Backend Core</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-purple-500/50 border border-transparent transition-all cursor-pointer"
+            >Java J2EE</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-purple-500/50 border border-transparent transition-all cursor-pointer"
+            >Spring Framework</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-purple-500/50 border border-transparent transition-all cursor-pointer"
+            >Hibernate / JPA</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-purple-500/50 border border-transparent transition-all cursor-pointer"
+            >REST / SOAP</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-purple-500/50 border border-transparent transition-all cursor-pointer"
+            >Oracle SQL</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-purple-500/50 border border-transparent transition-all cursor-pointer"
+            >OpenText WEM</span
+          >
+        </div>
+      </div>
+
+      <!-- 4. Infrastructure & Lab -->
+      <div
+        id="about"
+        class="md:col-span-2 lg:row-span-2 glass rounded-3xl p-6 border-0 gradient-border card-hover glow-purple"
+      >
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-2xl">🚀</span>
+          <h3 class="text-xl font-bold">Infrastructure & Lab</h3>
+        </div>
+        <p class="text-zinc-400 text-sm mb-4">
+          Cluster propio gestionado con Proxmox, ZFS y Docker.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-emerald-500/50 border border-transparent transition-all cursor-pointer"
+            >Proxmox VE</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-emerald-500/50 border border-transparent transition-all cursor-pointer"
+            >Docker Compose</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-emerald-500/50 border border-transparent transition-all cursor-pointer"
+            >Linux / Bash</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-emerald-500/50 border border-transparent transition-all cursor-pointer"
+            >Nginx Proxy</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-emerald-500/50 border border-transparent transition-all cursor-pointer"
+            >Cloudflare Tunnels</span
+          >
+          <span
+            class="px-3 py-2 glass-strong rounded-full text-sm hover:scale-110 hover:border-emerald-500/50 border border-transparent transition-all cursor-pointer"
+            >ZFS Storage</span
+          >
+        </div>
+      </div>
+
+      <!-- 5. Education & Certifications -->
+      <div
+        class="md:col-span-2 lg:row-span-2 glass rounded-3xl p-6 border-0 gradient-border card-hover"
+      >
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🎓</span>
+          <h3 class="text-xl font-bold">Educación y Certificaciones</h3>
+        </div>
+        <div class="space-y-4">
+          <div
+            class="glass-strong rounded-xl p-4 border-l-4 border-blue-500 hover:border-purple-500 transition-colors"
+          >
+            <div class="font-semibold text-white">
+              Analista Funcional Java (Avanzado)
+            </div>
+            <div class="text-sm text-blue-400">Academias Teide</div>
+            <div class="text-xs text-zinc-500 mt-1">2010</div>
+          </div>
+          <div
+            class="glass-strong rounded-xl p-4 border-l-4 border-blue-500 hover:border-purple-500 transition-colors"
+          >
+            <div class="font-semibold text-white">
+              Técnico Sist. Informáticos (FP GM)
+            </div>
+            <div class="text-sm text-blue-400">Academias Teide</div>
+            <div class="text-xs text-zinc-500 mt-1">2008-2010</div>
+          </div>
+          <div
+            class="glass-strong rounded-xl p-4 border-l-4 border-blue-500 hover:border-purple-500 transition-colors"
+          >
+            <div class="font-semibold text-white">Certificaciones Extra</div>
+            <div class="text-sm text-zinc-400 mt-1">
+              Scrum Master • Google Action Script • Adobe Expert
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Professional Experience - Full Width -->
+      <div
+        id="experience"
+        class="md:col-span-2 lg:col-span-4 lg:row-span-4 glass rounded-3xl p-6 lg:p-8 border-0 gradient-border"
+      >
+        <div class="flex items-center gap-2 mb-6">
+          <span class="text-3xl">💼</span>
+          <h3 class="text-2xl font-bold gradient-text">
+            Experiencia Profesional
+          </h3>
+        </div>
+        <div class="space-y-6">
+          <div
+            class="glass-strong rounded-2xl p-6 border-l-4 border-blue-500 hover:border-purple-500 transition-all hover:scale-[1.02]"
+          >
+            <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+              <div class="font-bold text-lg text-white">
+                Analista Funcional SOA (Java, Rest, SOAP, Spring)
+              </div>
+              <span
+                class="text-xs px-3 py-1 glass rounded-full border border-blue-500/30 text-blue-400"
+                >2024</span
+              >
+            </div>
+            <div class="text-blue-400 text-sm mb-2">Sandav</div>
+            <p class="text-zinc-400 text-sm">
+              Desarrollo de evolutivos y resolución de incidencias en
+              aplicaciones GLINTT. Stack J2EE completo.
+            </p>
+          </div>
+
+          <div
+            class="glass-strong rounded-2xl p-6 border-l-4 border-blue-500 hover:border-purple-500 transition-all hover:scale-[1.02]"
+          >
+            <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+              <div class="font-bold text-lg text-white">
+                Analista Funcional Senior WEM y ECM
+              </div>
+              <span
+                class="text-xs px-3 py-1 glass rounded-full border border-blue-500/30 text-blue-400"
+                >2023 - 2024</span
+              >
+            </div>
+            <div class="text-blue-400 text-sm mb-2">Vipirsa (Ayto. Madrid)</div>
+            <p class="text-zinc-400 text-sm mb-3">
+              Migración crítica del portal del Ayuntamiento de Madrid (v8 a
+              v16.3).
+            </p>
+            <ul class="text-zinc-400 text-sm space-y-1.5">
+              <li class="flex items-start gap-2">
+                <span class="text-purple-400 mt-0.5">▸</span><span
+                  >Dockerización de entornos y despliegue TomEE.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-purple-400 mt-0.5">▸</span><span
+                  >Gestión de contenidos con OpenText WEM.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="glass-strong rounded-2xl p-6 border-l-4 border-blue-500 hover:border-purple-500 transition-all hover:scale-[1.02]"
+          >
+            <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+              <div class="font-bold text-lg text-white">
+                Analista Funcional SOA & Senior Vignette
+              </div>
+              <span
+                class="text-xs px-3 py-1 glass rounded-full border border-blue-500/30 text-blue-400"
+                >2015 - 2023</span
+              >
+            </div>
+            <div class="text-blue-400 text-sm mb-2">VASS (Cliente: Enagás)</div>
+            <p class="text-zinc-400 text-sm mb-3">
+              Responsable del proyecto Web Corporativa Enagás durante 8 años.
+            </p>
+            <ul class="text-zinc-400 text-sm space-y-1.5">
+              <li class="flex items-start gap-2">
+                <span class="text-purple-400 mt-0.5">▸</span><span
+                  >Desarrollo Full Stack (Java J2EE + HTML/CSS/JS).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-purple-400 mt-0.5">▸</span><span
+                  >Gestión de BBDD Oracle y servicios REST/SOAP.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-purple-400 mt-0.5">▸</span><span
+                  >CI/CD con Jenkins y Mavenización de proyectos.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="glass-strong rounded-2xl p-6 border-l-4 border-blue-500 hover:border-purple-500 transition-all hover:scale-[1.02]"
+          >
+            <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+              <div class="font-bold text-lg text-white">
+                Analista Bankspheere
+              </div>
+              <span
+                class="text-xs px-3 py-1 glass rounded-full border border-blue-500/30 text-blue-400"
+                >2011 - 2012</span
+              >
+            </div>
+            <div class="text-blue-400 text-sm mb-2">M&GT Consulting</div>
+            <p class="text-zinc-400 text-sm">
+              Gestión de proyectos bancarios (BGPCOR, VISOR) mediante Vega
+              Modeler y Bankspheere.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Project: Gas Stock CRM -->
+      <div
+        id="projects"
+        class="md:col-span-2 glass rounded-3xl overflow-hidden border-0 gradient-border card-hover group"
+      >
+        <div class="relative overflow-hidden h-48">
+          <img
+            src="/project-gasstock.png"
+            alt="Gas Stock CRM"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent"
+          >
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+            <span>⛽</span>
+            <span>Gas Stock CRM</span>
+          </h3>
+          <p class="text-zinc-400 text-sm mb-4 leading-relaxed">
+            Sistema integral de gestión para E.S. (Estaciones de Servicio).
+            Control de Stock, Facturación, CRM de Clientes, Dashboard QA y Panel
+            Administrativo.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1.5 glass-strong border border-purple-500/30 text-purple-400 rounded-full text-xs font-medium"
+              >React / Vite</span
+            >
+            <span
+              class="px-3 py-1.5 glass-strong border border-purple-500/30 text-purple-400 rounded-full text-xs font-medium"
+              >Playwright Testing</span
+            >
+            <span
+              class="px-3 py-1.5 glass-strong border border-purple-500/30 text-purple-400 rounded-full text-xs font-medium"
+              >CRM & Invoicing</span
+            >
+            <span
+              class="px-3 py-1.5 glass-strong border border-purple-500/30 text-purple-400 rounded-full text-xs font-medium"
+              >QA Dashboard</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Project: Media Center -->
+      <div
+        class="md:col-span-2 glass rounded-3xl overflow-hidden border-0 gradient-border card-hover group"
+      >
+        <div class="relative overflow-hidden h-48">
+          <img
+            src="/project-mediaserver.png"
+            alt="Media Center The Beast"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent"
+          >
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+            <span>🎬</span>
+            <span>Media Center "The Beast"</span>
+          </h3>
+          <p class="text-zinc-400 text-sm mb-4 leading-relaxed">
+            Infraestructura completa de streaming y domótica. 24 servicios
+            Dockerizados, 4.4TB almacenamiento ZFS y acceso remoto seguro.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1.5 glass-strong border border-blue-500/30 text-blue-400 rounded-full text-xs font-medium"
+              >Docker Compose</span
+            >
+            <span
+              class="px-3 py-1.5 glass-strong border border-blue-500/30 text-blue-400 rounded-full text-xs font-medium"
+              >Jellyfin</span
+            >
+            <span
+              class="px-3 py-1.5 glass-strong border border-blue-500/30 text-blue-400 rounded-full text-xs font-medium"
+              >*arr Stack</span
+            >
+            <span
+              class="px-3 py-1.5 glass-strong border border-blue-500/30 text-blue-400 rounded-full text-xs font-medium"
+              >Home Assistant</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Remote Ready -->
+      <div
+        class="glass rounded-3xl p-6 border-0 border-emerald-500/30 card-hover flex items-center justify-center text-center"
+        style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));"
+      >
+        <div>
+          <div class="text-4xl mb-2">🌍</div>
+          <h3 class="text-xl font-bold text-emerald-400">Remote Ready</h3>
+        </div>
+      </div>
+
+      <!-- 10. Contact -->
+      <a
+        id="contact"
+        href="mailto:miduga@gmail.com"
+        class="glass rounded-3xl p-6 border-0 gradient-border card-hover glow-blue flex items-center justify-center text-center group"
+        style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));"
+      >
+        <div>
+          <div class="text-4xl mb-2 group-hover:scale-125 transition-transform">
+            ✉️
+          </div>
+          <h2 class="text-xl font-bold text-white">Contactar</h2>
+        </div>
+      </a>
+    </div>
+
+    <!-- Social Links Footer -->
+    <div class="mt-16 flex justify-center gap-8 text-zinc-400 pb-8">
+      <a
+        href="https://github.com/r0dr1g0m0r3n0"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 glass px-6 py-3 rounded-full hover:text-white hover:border-blue-500/50 border border-transparent transition-all hover:scale-105"
+      >
+        <span class="text-2xl">📫</span>
+        <span class="font-medium">GitHub</span>
+      </a>
+      <a
+        href="https://linkedin.com/in/rodrigo-moreno"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 glass px-6 py-3 rounded-full hover:text-white hover:border-blue-500/50 border border-transparent transition-all hover:scale-105"
+      >
+        <span class="text-2xl">💼</span>
+        <span class="font-medium">LinkedIn</span>
+      </a>
+    </div>
+  </main>
+</Layout>
